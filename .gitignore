@@ -1,0 +1,19 @@
+## Add .NET gitignore
+
+Ignored:
+- bin/
+- obj/
+- local configuration files
+
+Why bin/ and obj/ should not be committed:
+- They are generated automatically during dotnet build.
+- They contain compiled files and temporary build artifacts.
+
+
+Why secret config files should not be committed:
+- They may contain passwords, API keys, connection strings, or environment-specific settings.
+- Secrets should be stored securely outside source control.
+
+Verification:
+- Ran dotnet build successfully.
+- Confirmed git status is clean.
